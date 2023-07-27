@@ -1,9 +1,9 @@
 ﻿namespace PocketManager.ViewModel.Navigations.Stores;
 public class NavigationStore
 {
-    public event Action? CurrentVmChange;
+    public event Action CurrentVmChange;
 
-    private ViewModelBase? _currentViewModel;
+    private ViewModelBase _currentViewModel;
     public ViewModelBase CurrentViewModel
     {
         get => _currentViewModel!;
