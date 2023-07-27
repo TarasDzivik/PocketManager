@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using PocketManager.Services.StartupHelpers;
+using PocketManager.Veiw.Pages;
 using PocketManager.ViewModel;
 
 namespace PocketManager;
@@ -19,8 +20,11 @@ public static class MauiProgram
 
         //builder.Services.AddSingleton<ILogger>();
         //builder.Services.AddSingleton<ILoggerFactory>();
+
         builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddFormFactory<MainPageVM>();
+        builder.Services.AddFormFactory<LoginViewModel>();
 
 #if DEBUG
         builder.Logging.AddDebug();
