@@ -40,20 +40,22 @@
         <HorizontalStackLayout Margin="10,10,10,0" HorizontalOptions="Center">
             <Button BackgroundColor="#faf"
                     Command="{Binding SubmitCommand}"
+                    
                     TextColor="#fff"
                     FontAttributes="Bold"
                     Margin="5"
                     Text="Submit"/>
             <Button BackgroundColor="#afa"
+                    Command="{Binding CreateCommand}"                    
                     TextColor="#fff"
                     FontAttributes="Bold"
                     Margin="5"
-                    Clicked="OnCreate"
+                   
                     Text="Create Account" />
             <Button BackgroundColor="LightGray"
+                    Command="{Binding ForgotPasswordCommand}"
                     TextColor="#fff"
-                    FontAttributes="Bold"
-                    Clicked="OnForgotPassword"
+                    FontAttributes="Bold"                   
                     Margin="5"
                     Text="Forgot Password" />
         </HorizontalStackLayout>
@@ -61,11 +63,13 @@
         <!--TODO: Bind ActivityIndicator to something, ex: Create account, of check existing Emeil or--> 
         <ActivityIndicator Margin="20" Color="#ffbeaa" IsRunning="{Binding ActivityIndicatorIsRunning}" />
 
+        <!--This code are commented because of it was inicialized in the code behind-->
+        
         <!--TODO: hendle ProgressBar and it to the create account steps or whatever else-->
-        <ProgressBar ProgressColor="Blue" x:Name="LoginProgressBar" />
+        <!--<ProgressBar ProgressColor="Blue" x:Name="LoginProgressBar" />-->
             
             
-        <Label Text="Create account?" x:Name="CreateAccount" HorizontalOptions="Center" Margin="5" FontSize="18"/>
+        <!--<Label Text="Create account?" x:Name="CreateAccount" HorizontalOptions="Center" Margin="5" FontSize="18"/>-->
        
         <!--this is doesn't work and I do not have an answer for it, but it's just an example from a book-->
         <!--<Editor.Behaviors>
