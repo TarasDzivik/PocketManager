@@ -2,104 +2,129 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="PocketManager.Veiw.Pages.LoginPage"
-             Title="LoginPage">
+             x:Class="PocketManager.Veiw.Pages.LoginPage">
 
-    <!--BOOK at 131 page-->
+    <!--BOOK at 168 page-->
+    <ScrollView VerticalScrollBarVisibility="Always" HorizontalScrollBarVisibility="Always">
+
+        <VerticalStackLayout Background="#faff" x:Name="LoginStackLayout" VerticalOptions="Fill" >
+            <Grid RowDefinitions="*,*,80">
+                <VerticalStackLayout Background="#faff" Grid.Row="0" VerticalOptions="Center" >
+                    <Grid ColumnDefinitions="*,*,*" 
+                          RowDefinitions="200,*,*,*,*" 
+                          x:Name="LoginGrid">
+
+                        <Label Text="Login or create account" 
+                               Grid.Column="0"
+                               Grid.ColumnSpan="3"
+                               Grid.Row="1"
+                               FontSize="22"
+                               Margin="10"
+                               TextTransform="Uppercase"
+                               FontAttributes="Bold"
+                               FontAutoScalingEnabled="True"
+                               TextColor="#51b"
+                               HorizontalOptions="Center">
+
+                        </Label>
+                        <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" WidthRequest="300" HorizontalOptions="Fill" >
+                            <Entry Text="{Binding email}"                       
+                                   HorizontalOptions="EndAndExpand"
+                                   Placeholder="Email"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   MinimumWidthRequest="200"
+                                   WidthRequest="300"
+                                   MaximumHeightRequest="500"
+                                   />
+                        </HorizontalStackLayout>
+                        
+                        <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" WidthRequest="300"  HorizontalOptions="Fill" >
+                            <Entry Text="{Binding Password}"
+                                   HorizontalOptions="EndAndExpand"
+                                   Placeholder="Password"
+                                   IsPassword="True"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   MinimumWidthRequest="200"
+                                   WidthRequest="300"
+                                   MaximumHeightRequest="500"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,10,10,0" HorizontalOptions="Center" >
+                            <Button Command="{Binding LogInCommand}"
+                                    BackgroundColor="#faf"
+                                    TextColor="#fff" 
+                                    FontAttributes="Bold"
+                                    Margin="5"
+                                    MinimumWidthRequest="90"
+                                    WidthRequest="140"
+                                    MaximumHeightRequest="240"
+                                    Text="LogIn"/>
+
+                            <Button Command="{Binding SignUpCommand}"
+                                    BackgroundColor="#afa"                    
+                                    TextColor="#fff"
+                                    FontAttributes="Bold"
+                                    Margin="5"   
+                                    MinimumWidthRequest="90"
+                                    WidthRequest="140"
+                                    MaximumHeightRequest="240"
+                                    Text="SignUp" />
+
+                        </HorizontalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
 
 
-    <VerticalStackLayout Background="#faff" x:Name="LoginStackLayout">
-        <HorizontalStackLayout WidthRequest="300" HorizontalOptions="Center">
-            <Label Text="User Name"
-                   FontSize="Medium"
-                   HorizontalOptions="Start"
-                   Margin="10,20,10,0"
-                   FontAttributes="Bold"
-                   VerticalOptions="Center"
-                   VerticalTextAlignment="Center" />
-            <Entry Text="{Binding Name}"
-                       HorizontalOptions="EndAndExpand"
-                       Placeholder="User Name"
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       WidthRequest="150" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout WidthRequest="300" HorizontalOptions="Center">
-            <Label Text="Password"
-                   FontSize="Medium"
-                   HorizontalOptions="Start"
-                   Margin="10,10,10,0"
-                   FontAttributes="Bold"
-                   VerticalOptions="Center"
-                   VerticalTextAlignment="Center" />
-            <Entry Text="{Binding Password}"
-                   HorizontalOptions="EndAndExpand"
-                   Placeholder="Password"
-                   IsPassword="True"
-                   TextColor="Black"
-                   FontAttributes="Bold"
-                   WidthRequest="150" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout Margin="10,10,10,0" HorizontalOptions="Center">
-            <Button Command="{Binding SubmitCommand}"
-                    BackgroundColor="#faf"
-                    TextColor="#fff"
-                    FontAttributes="Bold"
-                    Margin="5"
-                    Text="Submit"/>
-            <Button Command="{Binding CreateCommand}"
-                    BackgroundColor="#afa"                    
-                    TextColor="#fff"
-                    FontAttributes="Bold"
-                    Margin="5"                   
-                    Text="Create Account" />
-            <Button Command="{Binding ForgotPasswordCommand}"
-                    BackgroundColor="LightGray"
-                    TextColor="#fff"
-                    FontAttributes="Bold"
-                    Margin="5"
-                    Text="Forgot Password" />
-        </HorizontalStackLayout>
+                <!--TODO: Bind ActivityIndicator to something, ex: Create account, of check existing Emeil or-->
+                <!--<ActivityIndicator Margin="20" Color="#ffbeaa" IsRunning="{Binding ActivityIndicatorIsRunning}" />-->
+            </Grid>
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="End" HorizontalOptions="Center">
+                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="End" >
+                    <Button Command="{Binding ForgotPasswordCommand}"
+                            HorizontalOptions="Center"
+                            BackgroundColor="LightGray"
+                            TextColor="#fff"
+                            FontAttributes="None"
+                            Margin="10"
+                            Text="Forgot Password" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <FlexLayout Grid.Row="2" Grid.ColumnSpan="3" VerticalOptions="Center" Opacity="0.70"
+                        HorizontalOptions="Center" Background="gray" HeightRequest="80" WidthRequest="500"
+                        Wrap="Wrap">
+                <Label Text="Here may be your ad... Or may not"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       TextColor="#fff"
+                       FontAttributes="None"
+                       Margin="5"/>
+            </FlexLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
 
-        <!--TODO: Bind ActivityIndicator to something, ex: Create account, of check existing Emeil or--> 
-        <ActivityIndicator Margin="20" Color="#ffbeaa" IsRunning="{Binding ActivityIndicatorIsRunning}" />
 
-        <!--This code are commented because of it was inicialized in the code behind-->
-        
-        <!--TODO: hendle ProgressBar and it to the create account steps or whatever else-->
-        <!--<ProgressBar ProgressColor="Blue" x:Name="LoginProgressBar" />-->
-            
-            
-        <!--<Label Text="Create account?" x:Name="CreateAccount" HorizontalOptions="Center" Margin="5" FontSize="18"/>-->
-       
-        <!--this is doesn't work and I do not have an answer for it, but it's just an example from a book-->
-        <!--<Editor.Behaviors>
+
+
+<!--This code are commented because of it was inicialized in the code behind-->
+
+<!--TODO: hendle ProgressBar and it to the create account steps or whatever else-->
+<!--<ProgressBar ProgressColor="Blue" x:Name="LoginProgressBar" />-->
+
+
+<!--<Label Text="Create account?" x:Name="CreateAccount" HorizontalOptions="Center" Margin="5" FontSize="18"/>-->
+
+<!--this is doesn't work and I do not have an answer for it, but it's just an example from a book-->
+<!--<Editor.Behaviors>
             <toolkit:EventToCommandBehavior EventName="Completed" Command="{Binding EditorCompletedCommand}" />
         </Editor.Behaviors>-->
 
-        <Label Text="{Binding LostPasswordExcuse}"
+<!--<Label Text="{Binding LostPasswordExcuse}"
                FontSize="Small"
                IsVisible="{Binding EditorContentVisible}"
                LineBreakMode="WordWrap"
                Margin="10"
-               x:Name="EditorContents" />
+               x:Name="EditorContents" />-->
             
-        <HorizontalStackLayout HorizontalOptions="Center">
-            <Frame BorderColor="Blue"
-                   CornerRadius="10"
-                   HasShadow="True"
-                   HeightRequest="100"
-                   WidthRequest="100">
-                <Frame.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="Yellow" Offset="0.9" />
-                        <GradientStop Color="Red" Offset="0.1" />
-                    </RadialGradientBrush>
-                </Frame.Background>
-            </Frame>
-        </HorizontalStackLayout>
-
-    </VerticalStackLayout>
-</ContentPage>
-       
-           

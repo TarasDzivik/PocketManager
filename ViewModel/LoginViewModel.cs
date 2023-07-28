@@ -15,7 +15,7 @@ internal partial class LoginViewModel
 
     #region Commands
     [RelayCommand]
-    private async void Submit()
+    private async void LogIn()
     {
         for (var i = 0.0; i < 1.0; i += 0.1)
         {
@@ -29,7 +29,7 @@ internal partial class LoginViewModel
     }
 
     [RelayCommand]
-    private async void Create()
+    private async void SignUp()
     {
         try
         {
