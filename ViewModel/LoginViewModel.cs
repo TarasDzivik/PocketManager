@@ -5,17 +5,13 @@ namespace PocketManager.ViewModel;
 [ObservableObject]
 internal partial class LoginViewModel
 {
-    [ObservableProperty]
-    private string name;
+    #region Observable Properties
+    [ObservableProperty] private string name;
+    [ObservableProperty] private string password;
+    [ObservableProperty] private string email;
+    [ObservableProperty] private bool activityIndicatorIsRunning = true;
 
-    [ObservableProperty]
-    private string password;
-
-    [ObservableProperty]
-    private string email;
-
-    [ObservableProperty]
-    private bool activityIndicatorIsRunning = true;
+    #endregion
 
     #region Commands
     [RelayCommand]
