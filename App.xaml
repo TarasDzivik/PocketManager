@@ -8,6 +8,17 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                
+                <ResourceDictionary Source="Resources/Styles/Entry_base_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Entry_email_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Entry_pass_style.xaml"/>
+                
+                <ResourceDictionary Source="Resources/Styles/Button_base_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Button_login_style.xaml"/>
+                <ResourceDictionary Source="Resources/Styles/Button_signup_style.xaml"/>
+
+                <ResourceDictionary Source="Resources/Styles/Label_base_style.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

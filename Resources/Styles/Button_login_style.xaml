@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketManager.Resources.Styles.Button_login_style">
+    <Style x:Key="b_login" TargetType="Button" BasedOn="{StaticResource b_base}">
+        <Setter Property="Text" Value="Log In"/>
+        <Style.Triggers>
+            <!--TODO: Add trigers fot changing colour and make some animations-->
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

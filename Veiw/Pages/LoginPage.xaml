@@ -18,59 +18,27 @@
                                Grid.Column="0"
                                Grid.ColumnSpan="3"
                                Grid.Row="1"
-                               FontSize="22"
-                               Margin="10"
-                               TextTransform="Uppercase"
-                               FontAttributes="Bold"
-                               FontAutoScalingEnabled="True"
-                               TextColor="#51b"
-                               HorizontalOptions="Center">
+                               Style="{StaticResource l_base}"
+                               TextColor="#51b">
 
                         </Label>
                         <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" WidthRequest="300" HorizontalOptions="Fill" >
                             <Entry Text="{Binding email}"                       
-                                   HorizontalOptions="EndAndExpand"
-                                   Placeholder="Email"
-                                   TextColor="Black"
-                                   FontAttributes="Bold"
-                                   MinimumWidthRequest="200"
-                                   WidthRequest="300"
-                                   MaximumHeightRequest="500"
-                                   />
+                                   Style="{StaticResource e_email}" />
                         </HorizontalStackLayout>
                         
                         <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" WidthRequest="300"  HorizontalOptions="Fill" >
                             <Entry Text="{Binding Password}"
-                                   HorizontalOptions="EndAndExpand"
-                                   Placeholder="Password"
-                                   IsPassword="True"
-                                   TextColor="Black"
-                                   FontAttributes="Bold"
-                                   MinimumWidthRequest="200"
-                                   WidthRequest="300"
-                                   MaximumHeightRequest="500"/>
+                                   Style="{StaticResource e_pass}"
+                                   Placeholder="Password"/>
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,10,10,0" HorizontalOptions="Center" >
                             <Button Command="{Binding LogInCommand}"
-                                    BackgroundColor="#faf"
-                                    TextColor="#fff" 
-                                    FontAttributes="Bold"
-                                    Margin="5"
-                                    MinimumWidthRequest="90"
-                                    WidthRequest="140"
-                                    MaximumHeightRequest="240"
-                                    Text="LogIn"/>
+                                    Style="{StaticResource b_login}" />
 
                             <Button Command="{Binding SignUpCommand}"
-                                    BackgroundColor="#afa"                    
-                                    TextColor="#fff"
-                                    FontAttributes="Bold"
-                                    Margin="5"   
-                                    MinimumWidthRequest="90"
-                                    WidthRequest="140"
-                                    MaximumHeightRequest="240"
-                                    Text="SignUp" />
+                                    Style="{StaticResource b_signup}" />
 
                         </HorizontalStackLayout>
                     </Grid>
@@ -83,16 +51,13 @@
             <VerticalStackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="End" HorizontalOptions="Center">
                 <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="End" >
                     <Button Command="{Binding ForgotPasswordCommand}"
-                            HorizontalOptions="Center"
+                            Style="{StaticResource b_base}"
                             BackgroundColor="LightGray"
-                            TextColor="#fff"
-                            FontAttributes="None"
-                            Margin="10"
                             Text="Forgot Password" />
                 </HorizontalStackLayout>
             </VerticalStackLayout>
             <FlexLayout Grid.Row="2" Grid.ColumnSpan="3" VerticalOptions="Center" Opacity="0.70"
-                        HorizontalOptions="Center" Background="gray" HeightRequest="80" WidthRequest="500"
+                        HorizontalOptions="Center" Background="gray" HeightRequest="80" 
                         Wrap="Wrap">
                 <Label Text="Here may be your ad... Or may not"
                        VerticalOptions="Center"
