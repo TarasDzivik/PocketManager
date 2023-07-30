@@ -4,6 +4,5 @@
              x:Class="PocketManager.Resources.Styles.Entry_email_style">
     <Style x:Key="e_email" TargetType="Entry" BasedOn="{StaticResource e_base}">
         <Setter Property="Placeholder" Value="Email" />
-        
     </Style>
 </ResourceDictionary>

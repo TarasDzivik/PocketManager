@@ -20,31 +20,24 @@
                                Grid.Row="1"
                                Style="{StaticResource l_base}"
                                TextColor="#51b">
-
                         </Label>
-                        <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" WidthRequest="300" HorizontalOptions="Fill" >
-                            <Entry Text="{Binding email}"                       
-                                   Style="{StaticResource e_email}" />
-                        </HorizontalStackLayout>
-                        
-                        <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="10" WidthRequest="300"  HorizontalOptions="Fill" >
-                            <Entry Text="{Binding Password}"
-                                   Style="{StaticResource e_pass}"
-                                   Placeholder="Password"/>
-                        </HorizontalStackLayout>
+
+                        <Entry Text="{Binding email}" 
+                               Style="{StaticResource e_email}" 
+                               Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" />
+                        <Entry Text="{Binding Password}"
+                               Style="{StaticResource e_pass}"
+                               Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
 
                         <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,10,10,0" HorizontalOptions="Center" >
                             <Button Command="{Binding LogInCommand}"
                                     Style="{StaticResource b_login}" />
-
                             <Button Command="{Binding SignUpCommand}"
                                     Style="{StaticResource b_signup}" />
 
                         </HorizontalStackLayout>
                     </Grid>
                 </VerticalStackLayout>
-
-
                 <!--TODO: Bind ActivityIndicator to something, ex: Create account, of check existing Emeil or-->
                 <!--<ActivityIndicator Margin="20" Color="#ffbeaa" IsRunning="{Binding ActivityIndicatorIsRunning}" />-->
             </Grid>
@@ -56,15 +49,14 @@
                             Text="Forgot Password" />
                 </HorizontalStackLayout>
             </VerticalStackLayout>
-            <FlexLayout Grid.Row="2" Grid.ColumnSpan="3" VerticalOptions="Center" Opacity="0.70"
+            <FlexLayout x:Name="ad"
+                        Grid.Row="2" Grid.ColumnSpan="3" VerticalOptions="Center" Opacity="0.70"
                         HorizontalOptions="Center" Background="gray" HeightRequest="80" 
                         Wrap="Wrap">
-                <Label Text="Here may be your ad... Or may not"
-                       VerticalOptions="Center"
-                       FontSize="20"
+                <Label Text="============ Here may be your ad... Or may not ==============="
+                       Style="{StaticResource l_base}"
                        TextColor="#fff"
-                       FontAttributes="None"
-                       Margin="5"/>
+                       FontAttributes="None"/>
             </FlexLayout>
         </VerticalStackLayout>
     </ScrollView>
