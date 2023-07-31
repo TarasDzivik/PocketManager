@@ -8,8 +8,30 @@
     Shell.NavBarIsVisible="false"
     Shell.BackgroundColor="DarkCyan">
 
-    <ShellContent
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="LoginPage" />
+    <TabBar>
+        <ShellContent
+            Title="LoginPage"
+            ContentTemplate="{DataTemplate local:LoginPage}"
+            Route="LoginPage" />
+        
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate view:MainPage}"
+            Icon="icon_home" />
 
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate view:AboutPage}"
+            Icon="icon_about" />
+
+        <ShellContent
+            Title="Preferences"
+            ContentTemplate="{DataTemplate view:PreferencesPage}"
+            Icon="icon_prefs" />
+
+        <ShellContent
+            Title="Buddies"
+            ContentTemplate="{DataTemplate view:BuddiesPage}"
+            Icon="icon_buddies" />
+    </TabBar>
 </Shell>
