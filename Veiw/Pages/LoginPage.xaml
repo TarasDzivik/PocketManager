@@ -13,7 +13,6 @@
                     <Grid ColumnDefinitions="*,*,*" 
                           RowDefinitions="200,*,*,*,*" 
                           x:Name="LoginGrid">
-
                         <Label Text="Login or create account" 
                                Grid.Column="0"
                                Grid.ColumnSpan="3"
@@ -21,7 +20,6 @@
                                Style="{StaticResource l_base}"
                                TextColor="#51b">
                         </Label>
-
                         <Entry Text="{Binding email}" 
                                Style="{StaticResource e_email}" 
                                Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" />
@@ -34,7 +32,6 @@
                                     Style="{StaticResource b_login}" />
                             <Button Command="{Binding SignUpCommand}"
                                     Style="{StaticResource b_signup}" />
-
                         </HorizontalStackLayout>
                     </Grid>
                 </VerticalStackLayout>
