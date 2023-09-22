@@ -1,14 +1,13 @@
-﻿namespace PocketManager.Veiw.Pages;
+namespace PocketManager.Veiw.Pages;
 
-public partial class MainPage : ContentPage
+public partial class Main_Page : ContentPage
+
 {
     int count = 0;
-
-    public MainPage()
+    public Main_Page()
     {
         InitializeComponent();
     }
-
     private void OnCounterClicked(object sender, EventArgs e)
     {
         count++;
@@ -20,5 +19,5 @@ public partial class MainPage : ContentPage
 
         SemanticScreenReader.Announce(CounterBtn.Text);
     }
-}
 
+}

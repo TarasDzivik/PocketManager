@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketManager.Veiw.Pages.About_Page"
+             Title="About_Page">
+    <VerticalStackLayout>
+        <HorizontalStackLayout Spacing="10">
+
+            <Label Text="About this app"
+                   FontAttributes="Bold"
+                   FontSize="22"
+                   VerticalOptions="End" />
+            <Label Text="v0.1"
+                   FontSize="22"
+                   VerticalOptions="End" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Api Version"
+                   FontAttributes="Bold"
+                   FontSize="22"
+                   VerticalOptions="End" />
+            <Label Text="{Binding ApiVersion}"
+                   FontSize="22" 
+                   VerticalOptions="End" />
+        </HorizontalStackLayout>
+
+        <Label Text="This app is written in XAML and C# with .NET MAUI by Jesse Liberty and Rodrigo Juarez."
+               HeightRequest="60"
+               VerticalTextAlignment="Center" />
+        <Label Text="Concept and original design by Taras Dzivik"
+               HeightRequest="60"
+               VerticalTextAlignment="Center" />
+        <Label FontSize="Small" Text="Icons from IconScout: https://iconscout.com" />
+    </VerticalStackLayout>
+</ContentPage>

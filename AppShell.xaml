@@ -11,27 +11,27 @@
     <TabBar>
         <ShellContent
             Title="LoginPage"
-            ContentTemplate="{DataTemplate local:LoginPage}"
+            ContentTemplate="{DataTemplate local:Login_Page}"
             Route="LoginPage" />
         
         <ShellContent
             Title="Home"
-            ContentTemplate="{DataTemplate view:MainPage}"
+            ContentTemplate="{DataTemplate local:Main_Page}"
             Icon="icon_home" />
 
         <ShellContent
             Title="About"
-            ContentTemplate="{DataTemplate view:AboutPage}"
+            ContentTemplate="{DataTemplate local:About_Page}"
             Icon="icon_about" />
 
         <ShellContent
             Title="Preferences"
-            ContentTemplate="{DataTemplate view:PreferencesPage}"
+            ContentTemplate="{DataTemplate local:Preferences_Page}"
             Icon="icon_prefs" />
 
         <ShellContent
-            Title="Buddies"
-            ContentTemplate="{DataTemplate view:BuddiesPage}"
+            Title="My Account"
+            ContentTemplate="{DataTemplate local:MyAccount_Page}"
             Icon="icon_buddies" />
     </TabBar>
 </Shell>

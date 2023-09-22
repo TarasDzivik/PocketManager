@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PocketManager.Veiw.Pages.PreferencesPage"
-             Title="Preferences">
+             x:Class="PocketManager.Veiw.Pages.Preferences_Page"
+             Title="Preferences_Page">
     <ScrollView>
         <VerticalStackLayout>
             <Label Text="Please fill in as many preferences as you care to. &#10; &#10;
@@ -39,10 +39,10 @@
                                    HorizontalTextAlignment="Start"
                                    TextColor="{OnPlatform Black, iOS=White}"
                                    WidthRequest="350" />
-                                </Grid>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
             <Button Command="{Binding SavePreferencesCommand}"
                     Margin="30,20,0,0"
                     Clicked="SavePreferences"

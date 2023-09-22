@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace PocketManager.ViewModel;
 [ObservableObject]
-internal partial class LoginViewModel
+internal partial class Login_ViewModel
 {
     #region Observable Properties
     [ObservableProperty] private string name;
@@ -19,7 +19,7 @@ internal partial class LoginViewModel
     {
         for (var i = 0.0; i < 1.0; i += 0.1)
         {
-            await Veiw.Pages.LoginPage.LoginProgressBar.ProgressTo(i, 500, Easing.Linear);
+            await Veiw.Pages.Login_Page.LoginProgressBar.ProgressTo(i, 500, Easing.Linear);
         }
 
         await Application.Current.MainPage.DisplayAlert(
@@ -35,7 +35,7 @@ internal partial class LoginViewModel
         {
             for (double i = 0.0; i < 1.0; i += 0.1)
             {
-                await Veiw.Pages.LoginPage.LoginProgressBar.ProgressTo(i, 500, Easing.Linear);
+                await Veiw.Pages.Login_Page.LoginProgressBar.ProgressTo(i, 500, Easing.Linear);
             }
 
             await Application.Current.MainPage.DisplayAlert(
@@ -57,7 +57,7 @@ internal partial class LoginViewModel
     {
         try
         {
-            Veiw.Pages.LoginPage.CreateAccount.Text = (await Application.Current.MainPage.DisplayActionSheet(
+            Veiw.Pages.Login_Page.CreateAccount.Text = (await Application.Current.MainPage.DisplayActionSheet(
             "How can we solve this?", // [1] The first parameter is the title.
             "Cancel",                 // [2] The second parameter is the text for the Cancel button.
             null,                     // [3] The third parameter is the text for the OK button. Since we don’t need OK, we pass in null.

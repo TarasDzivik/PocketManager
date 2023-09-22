@@ -9,9 +9,9 @@ namespace PocketManager.ViewModel
 {
 
     [ObservableObject]
-    public partial class MainPageVM
+    public partial class MainPage_ViewModel
     {
-        public MainPageVM()
+        public MainPage_ViewModel()
         {
         }
     }

@@ -2,12 +2,13 @@ using PocketManager.ViewModel;
 
 namespace PocketManager.Veiw.Pages;
 
-public partial class PreferencesPage : ContentPage
+public partial class Preferences_Page : ContentPage
 {
-    private PreferencesViewModel vm;
-    public PreferencesPage()
+
+    private Preferences_ViewModel vm;
+    public Preferences_Page()
     {
-        vm = new PreferencesViewModel();
+        vm = new Preferences_ViewModel();
         BindingContext = vm;
         InitializeComponent();
     }

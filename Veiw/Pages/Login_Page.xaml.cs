@@ -2,12 +2,12 @@ using PocketManager.ViewModel;
 
 namespace PocketManager.Veiw.Pages;
 
-public partial class LoginPage : ContentPage
+public partial class Login_Page : ContentPage
 {
     public static ProgressBar LoginProgressBar;
     public static Label CreateAccount;
-    LoginViewModel vm = new LoginViewModel();
-    public LoginPage()
+    Login_ViewModel vm = new Login_ViewModel();
+    public Login_Page()
     {
         LoginProgressBar = new ProgressBar();
         CreateAccount = new Label();
@@ -15,4 +15,7 @@ public partial class LoginPage : ContentPage
         LoginStackLayout.Children.Add(LoginProgressBar);
         BindingContext = vm;
     }
+
+    // TODO: to fix the margins/padding/ colours
+    // TODO: implement loggining to the applicattion with the adding new user to the Database
 }

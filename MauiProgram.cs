@@ -21,10 +21,11 @@ public static class MauiProgram
         //builder.Services.AddSingleton<ILogger>();
         //builder.Services.AddSingleton<ILoggerFactory>();
 
-        builder.Services.AddSingleton<MainPage>();
-        builder.Services.AddSingleton<LoginPage>();
-        builder.Services.AddFormFactory<MainPageVM>();
-        builder.Services.AddFormFactory<LoginViewModel>();
+        builder.Services.AddSingleton<Main_Page>();
+        builder.Services.AddSingleton<Login_Page>();
+        builder.Services.AddFormFactory<MainPage_ViewModel>();
+        builder.Services.AddFormFactory<Login_ViewModel>();
+        builder.Services.AddFormFactory<Preferences_ViewModel>();
 
 #if DEBUG
         builder.Logging.AddDebug();

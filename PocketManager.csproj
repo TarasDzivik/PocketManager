@@ -79,10 +79,19 @@
 	  <MauiXaml Update="Resources\Styles\Labels\Label_base_style.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Veiw\Pages\LoginPage.xaml">
+	  <MauiXaml Update="Veiw\Pages\About_Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Veiw\Pages\PreferencesPage.xaml">
+	  <MauiXaml Update="Veiw\Pages\Login_Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Veiw\Pages\Main_Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Veiw\Pages\MyAccount_Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Veiw\Pages\Preferences_Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
